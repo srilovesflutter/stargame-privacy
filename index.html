@@ -226,16 +226,16 @@
     <main>
       <section id="who">
         <h2>1. Who we are</h2>
-        <p>Star Game is a free Flutter Android game published by Bollojula Srikanth (package name <strong>com.stargame.app</strong>). You can create or join an online room to play a real-time multiplayer card-passing game with friends, play a local game against the computer, or play solo mini-games in Time Pass (currently Squash the Bugs).</p>
+        <p>Star Game is a free Flutter Android game published by Bollojula Srikanth (package name <strong>com.stargame.app</strong>). It is designed for a general audience, including children and families. You can create or join an online room to play a real-time multiplayer card-passing game with friends or family, play a local game against the computer, or play solo mini-games in Time Pass (currently Squash the Bugs).</p>
         <p>The app does not require a user account, does not show advertisements, and does not process payments or real money.</p>
       </section>
 
       <section id="collect">
         <h2>2. Information we collect</h2>
-        <p>What is collected depends on how you use the app.</p>
+        <p>What is collected depends on how you use the app. For online play, we collect only the minimum needed to run the game.</p>
         <p><strong>Online multiplayer (Create Room or Join Room).</strong> To run a shared game, the app stores the following in Google Firebase Cloud Firestore:</p>
         <ul>
-          <li><strong>Display name:</strong> the name you type, or a suggested random name you can change, before you create or join a room. This name is shown to other players in the same room.</li>
+          <li><strong>Display name:</strong> the name you type, or a suggested random name you can change, before you create or join a room. This name is shown to other players in the same room. Please do not use a real full name, especially a child’s real full name; a first name, nickname, or the suggested random name is enough.</li>
           <li><strong>Player identifier:</strong> a random ID generated on your device for that session (it is not a Google or other login, and it is not saved on your device for later sessions).</li>
           <li><strong>Room and game data:</strong> the 4-digit room code, who created the room, who has joined, game status, cards and turns, scores and finishing places, the current app version of the room and of each player, and similar session details needed to keep everyone in sync.</li>
           <li><strong>Emoji reactions:</strong> if you send an emoji during a game, the app stores the emoji, your player ID, your display name, and a timestamp in that game’s emoji list. The app is designed to drop older reactions after a short time.</li>
@@ -264,22 +264,22 @@
           <li>Remember your mute setting and Time Pass best scores on your device</li>
           <li>Allow the publisher to maintain the service, including clearing old room and game records</li>
         </ul>
-        <p>We do not use this information for advertising, marketing, or profiling.</p>
+        <p>We do not sell this information, and we do not use it for advertising, marketing, or profiling.</p>
       </section>
 
       <section id="share">
         <h2>4. How information is shared</h2>
-        <p>We do not sell personal data.</p>
+        <p>We do not sell personal data, and we do not use or share data for advertising.</p>
         <ul>
           <li><strong>Other players in your room:</strong> your display name, game actions, scores, and any emoji you send are visible to the other people in that room or game. That is required for multiplayer play.</li>
-          <li><strong>Google Firebase (Cloud Firestore):</strong> online room, game, and emoji data is stored and synchronized through Google’s Firebase service, which we use as our cloud database. Google processes that data as a service provider and under <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google’s Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a> documentation.</li>
+          <li><strong>Google Firebase (Cloud Firestore):</strong> online room, game, and emoji data is stored and synchronized through Google’s Firebase service, which we use only as a service provider to run the multiplayer features. Google processes that data as a service provider and under <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google’s Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a> documentation.</li>
         </ul>
         <p>We may also disclose information if required by law or in response to a valid request from a public authority.</p>
       </section>
 
       <section id="store">
         <h2>5. Storage and retention</h2>
-        <p>Online room and game data is stored in Firebase Cloud Firestore for as long as it is needed to run the game and maintain recent sessions. The publisher periodically reviews and deletes old rooms and games from the database to reduce stored data. Some unfinished or stuck sessions may remain longer until they are cleaned up.</p>
+        <p>Online room and game data is stored in Firebase Cloud Firestore for as long as it is needed to run the game and maintain recent sessions. Old rooms and games are periodically cleared from the database, and the display names, player IDs, game state, and emoji reactions in those records are deleted at that time. Some unfinished or stuck sessions may remain until the next cleanup or until a deletion request is completed.</p>
         <p>Emoji reactions are intended to be short-lived and are cleaned up after a short period.</p>
         <p>Information stored only on your device (mute preference and Time Pass best scores) stays there until you change it, clear the app’s storage, or uninstall the app. Uninstalling the app does not by itself delete online room or game records that other players may still be using, or that remain in Firebase until they are cleaned up or deleted on request.</p>
       </section>
@@ -291,20 +291,23 @@
 
       <section id="children">
         <h2>7. Children’s privacy</h2>
-        <p>Star Game is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information through the app, please contact us at <a href="mailto:seven.srikanth@gmail.com">seven.srikanth@gmail.com</a> and we will take reasonable steps to delete that information if it is within our control.</p>
+        <p>Star Game is designed for a general audience, including children, and is intended to be suitable for players of all ages, including family play.</p>
+        <p>We collect only the minimum information needed to play. For an online room, that is a display name (please do not use a real full name, especially a child’s real full name; a nickname or the suggested random name is enough), a random player ID that lasts only for that session, the game state needed to keep everyone in the room in sync, and any emoji reactions sent during the game. Play vs Computer and Time Pass run on the device and are not written to our Firebase database.</p>
+        <p>The app does not require an account. It does not include advertisements, analytics, or tracking SDKs, and it does not collect location or contact data. We do not sell personal information and we do not use any of this information for advertising. Google Firebase is used only as a service provider to run the online multiplayer features.</p>
+        <p>Parents and guardians can request deletion of a child’s or family’s online game data by emailing <a href="mailto:seven.srikanth@gmail.com">seven.srikanth@gmail.com</a> with the room code, the approximate date, and the display name that was used. We will delete the related room and game records that we can reasonably identify. This data is also deleted when old rooms and games are periodically cleared from the database.</p>
       </section>
 
       <section id="choices">
         <h2>8. Your choices and deletion</h2>
-        <p>You can choose not to enter a personal name (the app can suggest a random display name), and you can change the name before you create or join a room. You can play Time Pass or Play vs Computer without creating an online room.</p>
-        <p>The app does not have an in-app account or a built-in “delete my data” button, because there is no sign-in account. If you want us to delete online data associated with a room you created or a display name you used, email <a href="mailto:seven.srikanth@gmail.com">seven.srikanth@gmail.com</a> with the room code, approximate date, and the name you used, and we will delete the related room and game records that we can reasonably identify.</p>
+        <p>You can use a suggested random display name instead of a personal name, and you can change the name before you create or join a room. Please do not enter a real full name. You can play Time Pass or Play vs Computer without creating an online room.</p>
+        <p>The app does not have an in-app account or a built-in “delete my data” button, because there is no sign-in account. Players, parents, or guardians who want online data deleted can email <a href="mailto:seven.srikanth@gmail.com">seven.srikanth@gmail.com</a> with the room code, approximate date, and the display name that was used, and we will delete the related room and game records that we can reasonably identify. Online data is also deleted when old rooms and games are periodically cleared.</p>
         <p>You may uninstall the app at any time to remove the local settings and scores stored on your device.</p>
         <p>If you have a question or a request about privacy, including any rights that may apply under the law where you live, contact us at the same email address.</p>
       </section>
 
       <section id="third-parties">
         <h2>9. Third-party services</h2>
-        <p>Online features use Google Firebase Cloud Firestore. When the app sends data to Firebase, Google’s privacy policy also applies to information Google receives in the course of providing that service:</p>
+        <p>Online features use Google Firebase Cloud Firestore only as a service provider to run multiplayer. When the app sends data to Firebase, Google’s privacy policy also applies to information Google receives in the course of providing that service:</p>
         <ul>
           <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
           <li><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a></li>
